@@ -1,4 +1,4 @@
 # SIG-VC
-```ruby bash
+```bash title="Bash"
 mkdir asc
 ```

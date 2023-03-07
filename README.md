@@ -12,9 +12,9 @@ https://drive.google.com/file/d/1FVr1fpncP5cpSMQYQaG0yhrScDmaEb1p/view?usp=shari
 
 ## Environment Setup
 ### compile and install kaldi
-Resources that might help:
-    kaldi build up: https://www.kaldi-asr.org/doc/build_setup.html
-    Cygwin: https://groups.google.com/g/kaldi-help/c/C2tcoAsP9Uo
+Resources that might help:  
+    kaldi build up: https://www.kaldi-asr.org/doc/build_setup.html  
+    Cygwin: https://groups.google.com/g/kaldi-help/c/C2tcoAsP9Uo  
 ```
 #Bash
 

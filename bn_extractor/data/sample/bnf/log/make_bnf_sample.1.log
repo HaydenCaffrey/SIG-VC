@@ -1,0 +1,43 @@
+# nnet3-compute --use-gpu=yes --online-ivector-period=10 --online-ivectors='scp:utils/filter_scp.pl data/sample/split1/1/utt2spk data/sample/ivector/ivector_online.scp |' --frame-subsampling-factor=1 "nnet3-copy --nnet-config=data/sample/bnf/output.config acoustic_mdl/final.mdl - |" "ark,s,cs:apply-cmvn --norm-means=false --norm-vars=false --utt2spk=ark:data/sample/split1/1/utt2spk scp:data/sample/split1/1/cmvn.scp scp:data/sample/split1/1/feats.scp ark:- |" ark:- | copy-feats --compress=true ark:- ark,scp:data/sample/bnf/data/raw_bnfeat_sample.1.ark,data/sample/bnf/data/raw_bnfeat_sample.1.scp 
+# Started at Tue Apr 26 05:41:36 CST 2022
+#
+copy-feats --compress=true ark:- ark,scp:data/sample/bnf/data/raw_bnfeat_sample.1.ark,data/sample/bnf/data/raw_bnfeat_sample.1.scp 
+nnet3-compute --use-gpu=yes --online-ivector-period=10 '--online-ivectors=scp:utils/filter_scp.pl data/sample/split1/1/utt2spk data/sample/ivector/ivector_online.scp |' --frame-subsampling-factor=1 'nnet3-copy --nnet-config=data/sample/bnf/output.config acoustic_mdl/final.mdl - |' 'ark,s,cs:apply-cmvn --norm-means=false --norm-vars=false --utt2spk=ark:data/sample/split1/1/utt2spk scp:data/sample/split1/1/cmvn.scp scp:data/sample/split1/1/feats.scp ark:- |' ark:- 
+WARNING (nnet3-compute[5.5.390~2-09697]:SelectGpuId():cu-device.cc:228) Not in compute-exclusive mode.  Suggestion: use 'nvidia-smi -c 3' to set compute exclusive mode
+LOG (nnet3-compute[5.5.390~2-09697]:SelectGpuIdAuto():cu-device.cc:373) Selecting from 8 GPUs
+LOG (nnet3-compute[5.5.390~2-09697]:SelectGpuIdAuto():cu-device.cc:388) cudaSetDevice(0): NVIDIA GeForce GTX 1080 Ti	free:9281M, used:1897M, total:11178M, free/total:0.830294
+LOG (nnet3-compute[5.5.390~2-09697]:SelectGpuIdAuto():cu-device.cc:388) cudaSetDevice(1): NVIDIA GeForce GTX 1080 Ti	free:11039M, used:139M, total:11178M, free/total:0.98756
+LOG (nnet3-compute[5.5.390~2-09697]:SelectGpuIdAuto():cu-device.cc:388) cudaSetDevice(2): NVIDIA GeForce GTX 1080 Ti	free:11039M, used:139M, total:11178M, free/total:0.98756
+LOG (nnet3-compute[5.5.390~2-09697]:SelectGpuIdAuto():cu-device.cc:388) cudaSetDevice(3): NVIDIA GeForce GTX 1080 Ti	free:11039M, used:139M, total:11178M, free/total:0.98756
+LOG (nnet3-compute[5.5.390~2-09697]:SelectGpuIdAuto():cu-device.cc:388) cudaSetDevice(4): NVIDIA GeForce GTX 1080 Ti	free:10236M, used:942M, total:11178M, free/total:0.915726
+LOG (nnet3-compute[5.5.390~2-09697]:SelectGpuIdAuto():cu-device.cc:388) cudaSetDevice(5): NVIDIA GeForce GTX 1080 Ti	free:11039M, used:139M, total:11178M, free/total:0.98756
+LOG (nnet3-compute[5.5.390~2-09697]:SelectGpuIdAuto():cu-device.cc:388) cudaSetDevice(6): NVIDIA GeForce GTX 1080 Ti	free:11039M, used:139M, total:11178M, free/total:0.98756
+LOG (nnet3-compute[5.5.390~2-09697]:SelectGpuIdAuto():cu-device.cc:388) cudaSetDevice(7): NVIDIA GeForce GTX 1080 Ti	free:11039M, used:139M, total:11178M, free/total:0.98756
+LOG (nnet3-compute[5.5.390~2-09697]:SelectGpuIdAuto():cu-device.cc:435) Trying to select device: 1 (automatically), mem_ratio: 0.98756
+LOG (nnet3-compute[5.5.390~2-09697]:SelectGpuIdAuto():cu-device.cc:454) Success selecting device 1 free mem ratio: 0.98756
+LOG (nnet3-compute[5.5.390~2-09697]:FinalizeActiveGpu():cu-device.cc:308) The active GPU is [1]: NVIDIA GeForce GTX 1080 Ti	free:10923M, used:255M, total:11178M, free/total:0.977183 version 6.1
+nnet3-copy --nnet-config=data/sample/bnf/output.config acoustic_mdl/final.mdl - 
+WARNING (nnet3-copy[5.5.390~2-09697]:Check():nnet-nnet.cc:789) Node prefinal-chain.affine is never used to compute any output.
+WARNING (nnet3-copy[5.5.390~2-09697]:Check():nnet-nnet.cc:789) Node prefinal-chain.relu is never used to compute any output.
+WARNING (nnet3-copy[5.5.390~2-09697]:Check():nnet-nnet.cc:789) Node prefinal-chain.batchnorm1 is never used to compute any output.
+WARNING (nnet3-copy[5.5.390~2-09697]:Check():nnet-nnet.cc:789) Node prefinal-chain.linear is never used to compute any output.
+WARNING (nnet3-copy[5.5.390~2-09697]:Check():nnet-nnet.cc:789) Node prefinal-chain.batchnorm2 is never used to compute any output.
+WARNING (nnet3-copy[5.5.390~2-09697]:Check():nnet-nnet.cc:789) Node output.affine is never used to compute any output.
+LOG (nnet3-copy[5.5.390~2-09697]:main():nnet3-copy.cc:114) Copied raw neural net from acoustic_mdl/final.mdl to -
+WARNING (nnet3-compute[5.5.390~2-09697]:Check():nnet-nnet.cc:789) Node prefinal-chain.affine is never used to compute any output.
+WARNING (nnet3-compute[5.5.390~2-09697]:Check():nnet-nnet.cc:789) Node prefinal-chain.relu is never used to compute any output.
+WARNING (nnet3-compute[5.5.390~2-09697]:Check():nnet-nnet.cc:789) Node prefinal-chain.batchnorm1 is never used to compute any output.
+WARNING (nnet3-compute[5.5.390~2-09697]:Check():nnet-nnet.cc:789) Node prefinal-chain.linear is never used to compute any output.
+WARNING (nnet3-compute[5.5.390~2-09697]:Check():nnet-nnet.cc:789) Node prefinal-chain.batchnorm2 is never used to compute any output.
+WARNING (nnet3-compute[5.5.390~2-09697]:Check():nnet-nnet.cc:789) Node output.affine is never used to compute any output.
+LOG (nnet3-compute[5.5.390~2-09697]:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 9 orphan nodes.
+LOG (nnet3-compute[5.5.390~2-09697]:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 15 orphan components.
+LOG (nnet3-compute[5.5.390~2-09697]:Collapse():nnet-utils.cc:1463) Added 6 components, removed 15
+apply-cmvn --norm-means=false --norm-vars=false --utt2spk=ark:data/sample/split1/1/utt2spk scp:data/sample/split1/1/cmvn.scp scp:data/sample/split1/1/feats.scp ark:- 
+LOG (apply-cmvn[5.5.390~2-09697]:main():apply-cmvn.cc:81) Copied 100 utterances.
+LOG (nnet3-compute[5.5.390~2-09697]:main():nnet3-compute.cc:189) Time taken 8.1602s: real-time factor assuming 100 frames/sec is 0.0375856
+LOG (nnet3-compute[5.5.390~2-09697]:main():nnet3-compute.cc:192) Done 100 utterances, failed for 0
+LOG (nnet3-compute[5.5.390~2-09697]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 1.28 seconds taken in nnet3 compilation total (breakdown: 0.982 compilation, 0.199 optimization, 0 shortcut expansion, 0.0302 checking, 0.00073 computing indexes, 0.0636 misc.) + 0 I/O.
+LOG (copy-feats[5.5.390~2-09697]:main():copy-feats.cc:143) Copied 100 feature matrices.
+# Accounting: time=9 threads=1
+# Ended (code 0) at Tue Apr 26 05:41:45 CST 2022, elapsed time 9 seconds

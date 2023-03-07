@@ -1,0 +1,18 @@
+# gmm-global-get-post --n=5 --min-post=0.025 exp/nnet3/extractor/final.dubm "ark,s,cs:apply-cmvn-online --config=exp/nnet3/extractor/online_cmvn.conf exp/nnet3/extractor/global_cmvn.stats scp:data/joint_960_sp_hires_60k/split30/11/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/nnet3/extractor/final.mat ark:- ark:- | subsample-feats --n=2 ark:- ark:- |" ark:- | scale-post ark:- 0.2 "ark:|gzip -c >exp/nnet3/extractor/post.11.gz" 
+# Started at Sat Jan 16 04:06:16 CST 2021
+#
+scale-post ark:- 0.2 'ark:|gzip -c >exp/nnet3/extractor/post.11.gz' 
+gmm-global-get-post --n=5 --min-post=0.025 exp/nnet3/extractor/final.dubm 'ark,s,cs:apply-cmvn-online --config=exp/nnet3/extractor/online_cmvn.conf exp/nnet3/extractor/global_cmvn.stats scp:data/joint_960_sp_hires_60k/split30/11/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/nnet3/extractor/final.mat ark:- ark:- | subsample-feats --n=2 ark:- ark:- |' ark:- 
+splice-feats --left-context=3 --right-context=3 ark:- ark:- 
+subsample-feats --n=2 ark:- ark:- 
+transform-feats exp/nnet3/extractor/final.mat ark:- ark:- 
+apply-cmvn-online --config=exp/nnet3/extractor/online_cmvn.conf exp/nnet3/extractor/global_cmvn.stats scp:data/joint_960_sp_hires_60k/split30/11/feats.scp ark:- 
+LOG (apply-cmvn-online[5.5.390~2-09697]:main():apply-cmvn-online.cc:135) Applied online CMVN to 3960 files, or 1707426 frames.
+LOG (transform-feats[5.5.390~2-09697]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -128.256 over 1.70743e+06 frames.
+LOG (transform-feats[5.5.390~2-09697]:main():transform-feats.cc:161) Applied transform to 1980 utterances; 0 had errors.
+LOG (subsample-feats[5.5.390~2-09697]:main():subsample-feats.cc:115) Processed 1980 feature matrices; 0 with errors.
+LOG (subsample-feats[5.5.390~2-09697]:main():subsample-feats.cc:117) Processed 1707426 input frames and 854263 output frames.
+LOG (gmm-global-get-post[5.5.390~2-09697]:main():gmm-global-get-post.cc:115) Done 1980 files, 0 with errors, average UBM log-likelihood is -50.4165 over 854263 frames.
+LOG (scale-post[5.5.390~2-09697]:main():scale-post.cc:79) Done 1980 posteriors;  0 had no scales.
+# Accounting: time=13 threads=1
+# Ended (code 0) at Sat Jan 16 04:06:29 CST 2021, elapsed time 13 seconds

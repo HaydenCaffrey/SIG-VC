@@ -1,0 +1,10 @@
+# compute-mfcc-feats --write-utt2dur=ark,t:make_mfcc/utt2dur.3 --verbose=2 --config=mfcc_hires.conf scp,p:make_mfcc/wav_synthesis.3.scp ark:- | copy-feats --write-num-frames=ark,t:make_mfcc/utt2num_frames.3 --compress=true ark:- ark,scp:/Netdata/zhanghz/yisuo_jiaofu/bn_extractor/mfcc/raw_mfcc_synthesis.3.ark,/Netdata/zhanghz/yisuo_jiaofu/bn_extractor/mfcc/raw_mfcc_synthesis.3.scp 
+# Started at Wed Apr 27 22:24:14 CST 2022
+#
+copy-feats --write-num-frames=ark,t:make_mfcc/utt2num_frames.3 --compress=true ark:- ark,scp:/Netdata/zhanghz/yisuo_jiaofu/bn_extractor/mfcc/raw_mfcc_synthesis.3.ark,/Netdata/zhanghz/yisuo_jiaofu/bn_extractor/mfcc/raw_mfcc_synthesis.3.scp 
+compute-mfcc-feats --write-utt2dur=ark,t:make_mfcc/utt2dur.3 --verbose=2 --config=mfcc_hires.conf scp,p:make_mfcc/wav_synthesis.3.scp ark:- 
+VLOG[2] (compute-mfcc-feats[5.5.594~1-129e]:main():compute-mfcc-feats.cc:182) Processed features for key an_1-1058.wav
+LOG (compute-mfcc-feats[5.5.594~1-129e]:main():compute-mfcc-feats.cc:185)  Done 1 out of 1 utterances.
+LOG (copy-feats[5.5.594~1-129e]:main():copy-feats.cc:143) Copied 1 feature matrices.
+# Accounting: time=0 threads=1
+# Ended (code 0) at Wed Apr 27 22:24:14 CST 2022, elapsed time 0 seconds

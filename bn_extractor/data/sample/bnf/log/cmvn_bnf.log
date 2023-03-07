@@ -1,0 +1,2 @@
+compute-cmvn-stats --spk2utt=ark:data/sample/bnf/spk2utt scp:data/sample/bnf/feats.scp ark,scp:/home/caizexin/temp/bn_extractor/data/sample/bnf/data/cmvn_bnf.ark,/home/caizexin/temp/bn_extractor/data/sample/bnf/data/cmvn_bnf.scp 
+LOG (compute-cmvn-stats[5.5.390~2-09697]:main():compute-cmvn-stats.cc:171) Done accumulating CMVN stats for 100 utterances; 0 had errors.

@@ -1,0 +1,2 @@
+compute-cmvn-stats --spk2utt=ark:data/synthesis/spk2utt scp:data/synthesis/feats.scp ark,scp:/Netdata/zhanghz/yisuo_jiaofu/bn_extractor/mfcc/cmvn_synthesis.ark,/Netdata/zhanghz/yisuo_jiaofu/bn_extractor/mfcc/cmvn_synthesis.scp 
+LOG (compute-cmvn-stats[5.5.594~1-129e]:main():compute-cmvn-stats.cc:171) Done accumulating CMVN stats for 3 utterances; 0 had errors.

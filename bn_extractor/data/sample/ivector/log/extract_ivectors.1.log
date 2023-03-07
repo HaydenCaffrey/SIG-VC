@@ -1,0 +1,13 @@
+# ivector-extract-online2 --config=data/sample/ivector/conf/ivector_extractor.conf ark:data/sample/split1/1/spk2utt scp:data/sample/split1/1/feats.scp ark:- | copy-feats --compress=true ark:- ark,scp:/home/caizexin/temp/bn_extractor/data/sample/ivector/ivector_online.1.ark,/home/caizexin/temp/bn_extractor/data/sample/ivector/ivector_online.1.scp 
+# Started at Tue Apr 26 05:41:35 CST 2022
+#
+copy-feats --compress=true ark:- ark,scp:/home/caizexin/temp/bn_extractor/data/sample/ivector/ivector_online.1.ark,/home/caizexin/temp/bn_extractor/data/sample/ivector/ivector_online.1.scp 
+ivector-extract-online2 --config=data/sample/ivector/conf/ivector_extractor.conf ark:data/sample/split1/1/spk2utt scp:data/sample/split1/1/feats.scp ark:- 
+LOG (ivector-extract-online2[5.5.390~2-09697]:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (ivector-extract-online2[5.5.390~2-09697]:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (ivector-extract-online2[5.5.390~2-09697]:main():ivector-extract-online2.cc:177) Estimated iVectors for 100 files, 0 with errors.
+LOG (ivector-extract-online2[5.5.390~2-09697]:main():ivector-extract-online2.cc:179) Average objective-function improvement was 27.44 per frame, over 21711 frames (weighted).
+LOG (ivector-extract-online2[5.5.390~2-09697]:main():ivector-extract-online2.cc:182) Average iVector length was 10.0912 and at utterance-end was 10.3449, over 21711 frames (weighted);  expected length is 10
+LOG (copy-feats[5.5.390~2-09697]:main():copy-feats.cc:143) Copied 100 feature matrices.
+# Accounting: time=1 threads=1
+# Ended (code 0) at Tue Apr 26 05:41:36 CST 2022, elapsed time 1 seconds

@@ -1,0 +1,17 @@
+conversion/aishell_twostage/ckpt/*
+conversion/aishell_twostage/log/
+conversion/aishell_twostage/syn_mel/
+conversion/aishell_twostage/syn_wav/
+conversion/aishell_twostage/synth/
+conversion/audios/
+conversion/bnf/
+conversion/embeds/
+conversion/mels/
+conversion/test_data/*
+conversion/training_data/*
+conversion/melgan-80-fast.tar.gz
+conversion/avarage_embed.npy
+conversion/train.txt
+conversion/sv_model/save_model/ECAPA-TDNN/*
+conversion/sv_model/save_model/ResNet34SE
+bn_extractor/acoustic_mdl/final.mdl

@@ -1,0 +1,1 @@
+from .mel2wav import MelVocoder

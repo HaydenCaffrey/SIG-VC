@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=5 python train.py --save_path=../logs/handpicked_ssb_debug --data_path=../dataset/ssb_handpicked/

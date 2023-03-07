@@ -1,1 +1,1 @@
-Put the pre-trained here
+Put the pre-trained model here

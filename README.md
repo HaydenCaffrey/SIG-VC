@@ -1,5 +1,6 @@
 # SIG-VC
-
+This repo is the official implementation of the paper "SIG-VC: A Speaker Information Guided Zero-Shot Voice Conversion System for Both Human Beings and Machines"   
+The paper can be found at https://arxiv.org/pdf/2111.03811.pdf
 ## Download Pre-trained Models
 Download the pre-trained bottleneck feature extractor and put it under bn_extractor/acoustic_mdl/  
 https://drive.google.com/file/d/1y6c2z-6EbtuCz5tHev4KN9Fs69bCaj4_/view?usp=sharing

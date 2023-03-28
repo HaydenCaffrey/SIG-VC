@@ -1,7 +1,9 @@
 # SIG-VC
 ### This repo is the official implementation of the paper "SIG-VC: A Speaker Information Guided Zero-Shot Voice Conversion System for Both Human Beings and Machines"   
 ### The paper can be found at https://arxiv.org/pdf/2111.03811.pdf
-## Download Pre-trained Models
+
+Following the steps below to reimplement the model or train on your own custom dataset.
+## 1. Download Pre-trained Models
 Download the pre-trained bottleneck feature extractor and put it under bn_extractor/acoustic_mdl/  
 https://drive.google.com/file/d/1y6c2z-6EbtuCz5tHev4KN9Fs69bCaj4_/view?usp=sharing
 
@@ -11,7 +13,7 @@ https://drive.google.com/file/d/1qsjR7mzHrpVqbNrt_QvtTLTmWo52XIf_/view?usp=shari
 Download the pre-trained voice converesion model and put it under conversion/aishell_twostage/ckpt/  
 https://drive.google.com/file/d/1FVr1fpncP5cpSMQYQaG0yhrScDmaEb1p/view?usp=sharing
 
-## Environment Setup
+## 2. Environment Setup
 ### compile and install kaldi
 Resources that might help:  
     kaldi build up: https://www.kaldi-asr.org/doc/build_setup.html  
@@ -51,7 +53,7 @@ Now you have a anaconda virtual environment named "pytorch", to enter this virtu
 conda activate pytorch
 ```
 
-## Data Preparation
+## 3. Data Preparation
 ### Prepare the training and testing files
 All the training data should be put under the path conversion/training_data/
 All the test data should be put under the path conversion/test_data/
@@ -99,7 +101,7 @@ python mel.py --mode test
 python embed_extraction.py
 ```
 
-## Train the model
+## 4.Train the model
 ### Finetune from the pre-trained model (pre-trained on AISHELL-3)
 ```
 #Bash
@@ -112,7 +114,7 @@ CUDA_VISIBLE_DEVICES=<n> python train.py --restore_step 201000
 CUDA_VISIBLE_DEVICES=<n> python train.py
 ```
 
-## Inference
+## 5.Inference
 Run the following commands, the converted speech will be under the path conversion/syn_wav/
 ```
 #Bash

@@ -1,7 +1,7 @@
 # SIG-VC
 This repo is the official implementation of the paper "SIG-VC: A Speaker Information Guided Zero-Shot Voice Conversion System for Both Human Beings and Machines"   
 
-<p align="center"><img src="docs/network.png" width="800"/></p>
+<p align="center"><img src="architecture.png" width="800"/></p>
 
 > [**SIG-VC: A Speaker Information Guided Zero-Shot Voice Conversion System for Both Human Beings and Machines**](https://arxiv.org/pdf/2111.03811.pdf)
 >

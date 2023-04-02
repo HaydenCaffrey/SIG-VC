@@ -3,7 +3,7 @@ This repo is the official implementation of the paper "SIG-VC: A Speaker Informa
 
 <p align="center"><img src="architecture.png" width="800"/></p>
 
-> [**SIG-VC: A Speaker Information Guided Zero-Shot Voice Conversion System for Both Human Beings and Machines**](https://arxiv.org/pdf/2111.03811.pdf)
+> [**SIG-VC: A Speaker Information Guided Zero-Shot Voice Conversion System for Both Human Beings and Machines**](https://arxiv.org/abs/2111.03811)
 >
 > Haozhe Zhang, Zexin Cai, Xiaoyi Qin, Ming Li
 

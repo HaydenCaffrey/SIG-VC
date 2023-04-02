@@ -1,6 +1,16 @@
 # SIG-VC
 This repo is the official implementation of the paper "SIG-VC: A Speaker Information Guided Zero-Shot Voice Conversion System for Both Human Beings and Machines"   
-The paper can be found at https://arxiv.org/pdf/2111.03811.pdf
+
+<p align="center"><img src="docs/network.png" width="800"/></p>
+
+> [**SIG-VC: A Speaker Information Guided Zero-Shot Voice Conversion System for Both Human Beings and Machines**](https://arxiv.org/pdf/2111.03811.pdf)
+>
+> Haozhe Zhang, Zexin Cai, Xiaoyi Qin, Ming Li
+
+### Abstract
+
+Nowadays, as more and more systems achieve good performance in traditional voice conversion (VC) tasks, people’s attention gradually turns to VC tasks under extreme conditions. In this paper, we propose a novel method for zero-shot voice conversion. We aim to obtain intermediate representations for speaker-content disentanglement of speech to better remove speaker information and get pure content information. Accordingly, our proposed framework contains a module that removes the speaker information from the acoustic feature of the source speaker. Moreover, speaker information control is added to our system to maintain the voice cloning performance.
+The proposed system is evaluated by subjective and objective metrics. Results show that our proposed system significantly reduces the trade-off problem in zero-shot voice conversion, while it also manages to have high spoofing power to the speaker verification system.
 
 Following the steps below to reimplement the model or train on your own custom dataset.
 ## 1. Download Pre-trained Models

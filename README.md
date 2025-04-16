@@ -15,10 +15,10 @@ The proposed system is evaluated by subjective and objective metrics. Results sh
 Following the steps below to reimplement the model or train on your own custom dataset.
 ## 1. Download Pre-trained Models
 Download the pre-trained bottleneck feature extractor and put it under bn_extractor/acoustic_mdl/  
-https://drive.google.com/file/d/1y6c2z-6EbtuCz5tHev4KN9Fs69bCaj4_/view?usp=sharing
+[https://drive.google.com/file/d/1y6c2z-6EbtuCz5tHev4KN9Fs69bCaj4_/view?usp=sharing](https://drive.google.com/drive/folders/1FDcG3VaK-uqkaOUFQShMghBGO7w75IvI)
 
 Download the pre-trained speaker embedding extractor and put it under conversion/sv_model/save_model/ECAPA-TDNN/  
-https://drive.google.com/file/d/1qsjR7mzHrpVqbNrt_QvtTLTmWo52XIf_/view?usp=sharing
+[https://drive.google.com/file/d/1qsjR7mzHrpVqbNrt_QvtTLTmWo52XIf_/view?usp=sharing](https://drive.google.com/file/d/16Gx-vE8kwbtXaCPEgidAifT74crjwEGA/view?usp=drive_link)
 
 Download the pre-trained voice converesion model and put it under conversion/aishell_twostage/ckpt/  
 https://drive.google.com/file/d/1FVr1fpncP5cpSMQYQaG0yhrScDmaEb1p/view?usp=sharing
